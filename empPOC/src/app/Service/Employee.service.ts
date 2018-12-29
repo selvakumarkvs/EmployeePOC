@@ -7,7 +7,7 @@ import {EmployeeBO} from '../BusinessObjects/EmployeeBO';
   providedIn: 'root',
 })
 export class EmployeeService {
-    private employeeApiURL = 'http://localhost:3000/employees';
+    private employeeApiURL = 'http://localhost:8569/api/values';
   constructor(private http: HttpClient) {
     
    }

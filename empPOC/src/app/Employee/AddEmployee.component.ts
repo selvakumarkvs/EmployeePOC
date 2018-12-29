@@ -17,7 +17,12 @@ export class AddEmployeeComponent implements OnInit {
 
         ngOnInit() {
             this.employeeService.getEmployee()
-                                .subscribe(emp=>this.empBO.fName = emp[0].fName);
+                                .subscribe(emp=>
+                                    {
+                                        this.empBO = ((<EmployeeBO[]>(emp))[0]);
+                                        //console.log(((<EmployeeBO[]>(emp))[0]).fName);
+                                    }
+                                    );
         }
     
 }
