@@ -1,4 +1,7 @@
 export class EmployeeBO {
-    fName: string;    
+    fName: string="";
+    lName: string="";
+    age?: number;
+    designation?: string;
+    emailAddress?: string;
 }
-

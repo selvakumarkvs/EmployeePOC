@@ -1,7 +1,33 @@
-{{empBO.fName}}
-
-<div>
-    <label>name:
-      <input [(ngModel)]="empBO.fName" placeholder="name">
-    </label>
+<form #empForm="ngForm">
+  <!--empForm is called as template reference variable-->
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Create Employee</h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label for="empFirstName">First Name</label>
+        <input id="empFirstName" name="empFirstName" type="text" class="form-control" [(ngModel)]=emp.fName>
+      </div>
+      <div class="form-group">
+        <label for="empLastName">Last Name</label>
+        <input id="empLastName" name="empLastName" type="text" class="form-control" [(ngModel)]=emp.lName>
+      </div>
+      <div class="form-group">
+        <label for="empAge">Age</label>
+        <input id="empAge" name="empAge" type="text" class="form-control" [(ngModel)]=emp.age>
+      </div>
+      <div class="form-group">
+        <label for="empDesig">Designation</label>
+        <input id="empDesig" name="empDesig" type="text" class="form-control" [(ngModel)]=emp.designation>
+      </div>
+      <div class="form-group">
+        <label for="empEmail">Email Address</label>
+        <input id="empEmail" name="empEmail" type="text" class="form-control" [(ngModel)]=emp.emailAddress>
+      </div>
+      <div class="panel-footer">
+        <button type="empSubmit" class="btn btn-primary" (click)="saveEmp()">Save</button>
+      </div>
+    </div>
   </div>
+</form>
